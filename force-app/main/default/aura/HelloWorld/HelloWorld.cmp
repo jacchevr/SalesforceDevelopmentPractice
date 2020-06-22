@@ -1,0 +1,11 @@
+<aura:component implements="flexipage:availableForAllPageTypes,force:appHostable" access="global">
+    <aura:attribute name="whom" type="String" access="global" default="World!" />
+	<h1 class="title">Hello, {!v.whom}</h1>
+    <ui:inputSelect class="single" aura:id="InputSelectSingle" change="{!c.onSingleSelectChange}">
+        
+        <ui:inputSelectOption text="Hal"/>
+        <ui:inputSelectOption text="Sally" value="true"/>
+        <ui:inputSelectOption text="Dave"/>
+        
+    </ui:inputSelect>
+</aura:component>

@@ -1,0 +1,9 @@
+<aura:component controller="OpenCasesApexController" >
+    <aura:attribute name="cases" type="Case[]" />
+    <aura:handler name="init" value="{!this}" action="{!c.doInit}" />
+    
+    <aura:iteration items="{!v.cases}" var="case" >
+        	<force:recordView recordId="{!case.Id}" type="MINI" />
+    </aura:iteration>
+    
+</aura:component>
